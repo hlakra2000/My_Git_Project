@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from typing import List
 
 def get_requirements(file_path:str)->List[str]:
     requirements = []
@@ -11,11 +12,5 @@ setup(
     author='Harsh',
     author_email='hlakra2000@gmail.com',
     packages=find_packages(),
-    install_requires=[
-        'numpy',
-        'pandas',
-        'matplotlib',
-        'seaborn',
-        'scikit-learn'
-    ]
+    install_requires=get_requirements('Requirements.txt')
 )
